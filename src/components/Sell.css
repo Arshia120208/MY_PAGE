@@ -1,6 +1,7 @@
+/* Sell.css */
 .sell-page {
   min-height: 100vh;
-  background: #f4f7fb;
+  background: var(--bg-main);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,23 +10,27 @@
 
 .sell-container {
   width: 100%;
-  max-width: 700px;
-  background: #fff;
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  max-width: 680px;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-color);
 }
 
 .sell-container h1 {
   text-align: center;
-  color: #2563eb;
-  margin-bottom: 10px;
+  color: var(--text-main);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .sell-container p {
   text-align: center;
-  color: #666;
+  color: var(--text-muted);
   margin-bottom: 30px;
+  font-size: 15px;
 }
 
 .input-group {
@@ -37,25 +42,29 @@
 .input-group label {
   font-weight: 600;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--text-main);
+  font-size: 14px;
 }
 
 .input-group input,
 .input-group select,
 .input-group textarea {
-  padding: 12px;
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
   font-size: 15px;
   outline: none;
-  transition: 0.3s;
+  background: #f8fafc;
+  color: var(--text-main);
+  transition: var(--transition);
 }
 
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 6px rgba(37, 99, 235, 0.2);
+  border-color: var(--primary);
+  background: var(--card-bg);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
 }
 
 .input-group textarea {
@@ -65,30 +74,26 @@
 .sell-btn {
   width: 100%;
   padding: 14px;
-  background: #2563eb;
+  background: var(--primary);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 17px;
+  border-radius: 12px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: var(--transition);
+  margin-top: 10px;
 }
 
 .sell-btn:hover {
-  background: #1d4ed8;
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
 
 @media (max-width: 768px) {
   .sell-container {
-    padding: 25px;
-  }
-
-  .sell-container h1 {
-    font-size: 28px;
-  }
-
-  .sell-btn {
-    font-size: 16px;
+    padding: 24px;
   }
 }
