@@ -1,73 +1,79 @@
-/* Google Font */
+/* App.css */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* Reset */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 12px 30px -4px rgba(37, 99, 235, 0.12);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f5f7fa;
-  color: #222;
+  background: var(--bg-main);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Root */
 #root {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Buttons */
 button {
   font-family: inherit;
+  cursor: pointer;
 }
 
-/* Images */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Lists */
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
-/* Form Elements */
-input,
-select,
-textarea {
+input, select, textarea {
   font-family: inherit;
 }
 
-/* Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563eb;
+  background: #cbd5e1;
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1d4ed8;
+  background: var(--primary);
 }
